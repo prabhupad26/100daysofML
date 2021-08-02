@@ -6,6 +6,7 @@
 
 ## _DAY1_ : _Boston house price prediction model_
 > Data obtained from [kaggle](https://www.kaggle.com/samratp/boston-housing-prices-evaluation-validation/data)
+> Kaggle Notebook can be viewed [here](https://www.kaggle.com/prabhupad26/boston-house-prices-prediction)
 
 * EDA (Exploratory data analysis) Observations and Processing data for better results  :
 1.  Correlation between the features (13 features in the dataset) suggests that there's a mix of positive and negative correlated features are present in the dataset, 
