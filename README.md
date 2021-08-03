@@ -57,3 +57,11 @@ Here is the summary of all the algorithm trained and tested :
 ![image](https://user-images.githubusercontent.com/11462012/128045540-7cbd4640-d1e3-41d3-ad4d-758e63882b2f.png)
 
 > * K-Nearest Neighbour seems to perform better on the test data.
+
+
+## _DAY3_ : _NewsGroup data classification_
+> Data obtained from [SKlearn inbuilt dataset](https://scikit-learn.org/0.19/datasets/twenty_newsgroups.html)
+
+In this execise the attempt is to classify a story into one of 20 different news categories, the dataset consist of 18000 newsgroups posts on 20 topics
+
+* EDA (Exploratory data analysis) Observations and Processing data for better results  :
