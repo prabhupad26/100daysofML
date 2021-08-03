@@ -37,4 +37,23 @@ While there are other algorithms which I would like to try out, but for now I'll
 > Problem statement and Data obtained from [Kaggle](https://www.kaggle.com/c/titanic/data)
 
 * EDA (Exploratory data analysis) Observations and Processing data for better results  :
+1. Null values found in :
+      * 687 rows with no Cabin data : Column will be removed as it doesn't much help in predicting `Survival`. 
+      * 2 rows with no Embarked data : Missing data will be replaced with 0 while converting the text data to numeric data.
+      * 177 rows with no Age data : Missing data will be replaced with the median of Age for every possible combination of `Pclass` and `Gender`.
+2. Most passenger who survived are Female.
+3. Most passenger who didn't survived lies in the age between 15 and 45, creating Age band will give more insight.
+4. Missing Age data is replace with median of `Age` data for 6 possible combinations of `Pclass` and `Gender`
+5. Box plots for `Embarked`/`Pclass`, `Age` and `Survived` shows that there are few outliers for Age param in 3 class for Q-embarked passengers , this will get rectified once Age Band are created.
+6. New feature `IsAlone` is crafted with the help of `Parch` and `SibSp` with the assumption that the passenger has boarded alone if he/she is not having any family or child or parent(`Parch`, `SibSp` is `0`).
+8. Fare band is also created same way as Age Band.
 
+
+* Creating train and test data :
+Since only 891 records are available with 9 relevant (1 handcrafted feature) features so I'm splitting the data in 80/20 ratio and before doing that I have shuffled the data so that is doesn't create any bias (which will lead to bias problem or under fitting problem). 
+
+* Training and evaluating the ML model with different learning algorithms :
+Here is the summary of all the algorithm trained and tested :
+![image](https://user-images.githubusercontent.com/11462012/128045540-7cbd4640-d1e3-41d3-ad4d-758e63882b2f.png)
+
+> * K-Nearest Neighbour seems to perform better on the test data.
