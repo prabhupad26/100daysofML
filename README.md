@@ -33,7 +33,7 @@ Since I was only able to obtain ~500 records with 10 relevant features so I'm sp
 While there are other algorithms which I would like to try out, but for now I'll conclude that the Random forest regressor is by far the best model which perfectly fits the linear curve on the data and predicts accurate MEDV for the given set of features. 
 
 
-## _DAY2_ : _Titanic survival proability prediction_
+## _DAY2_ : _Titanic survival probability prediction_
 > Problem statement and Data obtained from [Kaggle](https://www.kaggle.com/c/titanic/data)
 
 * EDA (Exploratory data analysis) Observations and Processing data for better results  :
