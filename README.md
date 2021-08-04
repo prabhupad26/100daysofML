@@ -9,6 +9,8 @@
 
 > Kaggle Notebook can be viewed [here](https://www.kaggle.com/prabhupad26/boston-house-prices-prediction)
 
+> [Link](https://github.com/prabhupad26/100daysofML/blob/main/boston_house_prices_prediction.ipynb) to python notebook .
+
 * EDA (Exploratory data analysis) Observations and Processing data for better results  :
 1.  Correlation between the features (13 features in the dataset) suggests that there's a mix of positive and negative correlated features are present in the dataset, 
     * In order to avoid the multicollinearity we need to remove either of the feature from a set of highly correlated feature. I tried removing TAX column as `TAX` and `RAD` gave         the highest correlation of 0.91 , simlarly removed `DIS` column as `DIS` and `AGE` gave highly negatively correlation of -0.75.
@@ -36,6 +38,8 @@ While there are other algorithms which I would like to try out, but for now I'll
 ## _DAY2_ : _Titanic survival probability prediction_
 > Problem statement and Data obtained from [Kaggle](https://www.kaggle.com/c/titanic/data)
 
+> [Link](https://github.com/prabhupad26/100daysofML/blob/main/titanic_classification_problem.ipynb) to python notebook.
+
 * EDA (Exploratory data analysis) Observations and Processing data for better results  :
 1. Null values found in :
       * 687 rows with no Cabin data : Column will be removed as it doesn't much help in predicting `Survival`. 
@@ -62,6 +66,27 @@ Here is the summary of all the algorithm trained and tested :
 ## _DAY3_ : _NewsGroup data classification_
 > Data obtained from [SKlearn inbuilt dataset](https://scikit-learn.org/0.19/datasets/twenty_newsgroups.html)
 
+> [Link](https://github.com/prabhupad26/100daysofML/blob/main/titanic_classification_problem.ipynb) to python notebok
+
 In this execise the attempt is to classify a story into one of 20 different news categories, the dataset consist of 18000 newsgroups posts on 20 topics
 
 * EDA (Exploratory data analysis) Observations and Processing data for better results  :
+1. Created a data frame which will include all the data obtained from `sklearn.datasets.fetch_20newsgroups`.
+2. Each data is a email thread with a mail subject line.
+3. Average number of email threads for every news category is ~500-600.
+4. I have performed the below preprocessing steps :
+      * Removed stopwords ([nltk](https://www.nltk.org/_modules/nltk/corpus.html)).
+      * Removed email addresses and special characters using regex.
+      * Trimmed each mail thread and lowercased.
+5. Created a wordcloud to see the density distribution of words in the dataset.
+6. Created a vector representation using the TF-IDF scores  of the entire dataset.
+
+
+* Training and evaluating the ML model with Multinomial NaiveBayes algorithm :
+
+For training the model the vector representation is used which was created earlier.  It gives an accuracy of 0.81 on the training data, and same accuracy score for test data.
+
+* Model Evaluation :
+1. Confusion matrix shows a very good results , shows very few False Positives and False Negatives.
+2. ROC Curve shows for every news category the AUC is around 0.90 - 1.0 
+3. From the PR curve it looks there are chances of class imbalance for those categories which has lower Area Under the Curve, so the model could be a bit biased towards the other categories which has greater AUC. This could be avoided by including more data for those categories with less AUC.
