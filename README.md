@@ -90,3 +90,7 @@ For training the model the vector representation is used which was created earli
 1. Confusion matrix shows a very good results , shows very few False Positives and False Negatives.
 2. ROC Curve shows for every news category the AUC is around 0.90 - 1.0 
 3. From the PR curve it looks there are chances of class imbalance for those categories which has lower Area Under the Curve, so the model could be a bit biased towards the other categories which has greater AUC. This could be avoided by including more data for those categories with less AUC.
+
+
+## _DAY4_ : _Predicting handwritten digits using MNIST dataset with Pytorch framework _
+
