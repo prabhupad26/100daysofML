@@ -127,4 +127,14 @@ Cross entropy loss is used for calculating the output error :
 
 
 ## _DAY5_ : _Car Price Prediction (Kaggle competition)_
-
+* Given a dataset of car prices for old cars along with features like year, engine, mileage, seater, etc. the learning model should make prediction using these features.
+* EDA (Exploratory data analysis) Observations and Processing data for better results  :
+   1. Converted categorical text data to numeric data for `mileage, engine, max_power, fuel, seller_type, transmission, owner` columns.
+   2. Created new feature `years_old` which tells us about how old the car is.
+   3. Removed `name, torque, year` as it doesn't have any useful numeric (there might be a possibility to convert torque to power need to check this) data.
+   4. There are ~200 rows missing data for few columns, dropping those data.
+   5. `seats` has very less correlation (almost 0) with the selling price, removing that column.
+ 
+* Training and evaluating the ML model with different learning algorithms :
+   1. Random forest regression shows the best accuracy score of ~0.97 on the testing data and ~0.98 on the training data (`number of estimators used : 100`).
+   2. Linear regression didn't perform well on this data. (Accuracy score : ~0.67)
