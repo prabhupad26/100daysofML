@@ -127,6 +127,9 @@ Cross entropy loss is used for calculating the output error :
 
 
 ## _DAY5_ : _Car Price Prediction (Kaggle competition)_
+
+> Kaggle Notebook can be viewed [here](https://www.kaggle.com/mohaiminul101/car-price-prediction)
+
 * Given a dataset of car prices for old cars along with features like year, engine, mileage, seater, etc. the learning model should make prediction using these features.
 * EDA (Exploratory data analysis) Observations and Processing data for better results  :
    1. Converted categorical text data to numeric data for `mileage, engine, max_power, fuel, seller_type, transmission, owner` columns.
