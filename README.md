@@ -92,5 +92,5 @@ For training the model the vector representation is used which was created earli
 3. From the PR curve it looks there are chances of class imbalance for those categories which has lower Area Under the Curve, so the model could be a bit biased towards the other categories which has greater AUC. This could be avoided by including more data for those categories with less AUC.
 
 
-## _DAY4_ : _Predicting handwritten digits using MNIST dataset with Pytorch framework _
-
+## _DAY4_ : _Predicting handwritten digits using MNIST dataset with Pytorch framework_
+In this exercise I'll be using the pytorch framework to train 2 fully connected neural network (Linear layers) to learn to predict the handwritten digit given a 28 * 28 dimension greyscale image obtained from torchvision inbuild API.
