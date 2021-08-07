@@ -94,3 +94,32 @@ For training the model the vector representation is used which was created earli
 
 ## _DAY4_ : _Predicting handwritten digits using MNIST dataset with Pytorch framework_
 In this exercise I'll be using the pytorch framework to train 2 fully connected neural network (Linear layers) to learn to predict the handwritten digit given a 28 * 28 dimension greyscale image obtained from torchvision inbuild API.
+
+* Data creation for the ML model
+   1. Downloaded dataset from `torchvision.dataset.MNIST`.
+   2. Applied `torchvision.transforms` to convert the downloaded data to its tensor form and normalized using mean = 0.1307 and standard deviation =0.3081
+   3. Created a training set and validation set (testing set gets downloaded using `torchvision.datasets.MNIST`) using an utility function - `torch.utils.data.sampler.SubsetRandomSampler`.
+   4. Visualized the data to check if the data and the labels are correct.
+
+* Neural network definition :
+   1. Defined 2 Fully connnected layers with dimensions : `28*28 x 512 and 512 x 10` with dropouts of 0.2
+   2. The forward pass function is defined in the following manner :
+         Fully connected Layer 1 ((batch_size) x 28*28) --> ReLU Activation + Dropouts--> Fully connected Layer 2 (512 x 10) --> ReLU Activation + Dropouts --> output((batch size x 10)) [The final output are the predicted handwritten digits].
+   3. Error function used : CrossEntropy Error  (`torch.nn.CrossEntropyLoss`) , Optimizer / Objective function used : Stocastic gradient descent (`torch.optim.SGD`).
+   4. Below are the hyperparameter used and experimented:
+         - learning rate = 0.001
+         - epochs = 20
+         - probability of dropping the neuron values per layer = 0.2
+         - hidden unit in each fully connected layer = 512
+
+
+* Model Evaluation :
+Cross entropy loss is used for calculating the output error :
+1. Training error , Validation error reported as : (0.217226, 0.213741) :
+
+   ![image](https://user-images.githubusercontent.com/11462012/128593014-1a5bc7c0-62ae-4fee-972e-0304c9342c5d.png)
+2. Training error reported as 0.208873
+3. Accuracy % (Number of correct prediction/ Total predictions made) per digits 0-9 :
+   ![image](https://user-images.githubusercontent.com/11462012/128592955-5e3dbe4c-4d80-44a4-aeb3-c285aa4fa9c3.png)
+4. Finally the visualization of the predictions made :
+   ![image](https://user-images.githubusercontent.com/11462012/128592974-ae069268-286e-4a2a-b596-40a00a3e1815.png)
