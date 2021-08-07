@@ -124,3 +124,7 @@ Cross entropy loss is used for calculating the output error :
    ![image](https://user-images.githubusercontent.com/11462012/128592955-5e3dbe4c-4d80-44a4-aeb3-c285aa4fa9c3.png)
 4. Finally the visualization of the predictions made :
    ![image](https://user-images.githubusercontent.com/11462012/128592974-ae069268-286e-4a2a-b596-40a00a3e1815.png)
+
+
+## _DAY5_ : _Car Price Prediction (Kaggle competition)_
+
