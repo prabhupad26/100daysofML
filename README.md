@@ -120,6 +120,7 @@ Cross entropy loss is used for calculating the output error :
    ![image](https://user-images.githubusercontent.com/11462012/128593014-1a5bc7c0-62ae-4fee-972e-0304c9342c5d.png)
 2. Training error reported as 0.208873
 3. Accuracy % (Number of correct prediction/ Total predictions made) per digits 0-9 :
+
    ![image](https://user-images.githubusercontent.com/11462012/128592955-5e3dbe4c-4d80-44a4-aeb3-c285aa4fa9c3.png)
 4. Finally the visualization of the predictions made :
    ![image](https://user-images.githubusercontent.com/11462012/128592974-ae069268-286e-4a2a-b596-40a00a3e1815.png)
