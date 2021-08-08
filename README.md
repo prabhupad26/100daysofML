@@ -144,4 +144,8 @@ Cross entropy loss is used for calculating the output error :
    3. On removing the skewness in the data using its log values (for `selling_price`, `km_driven`, `years_old`) the linear regression performance improved by 0.84 on train data and 0.85 on testing data.
 
 
-## _DAY6_ : _Transfer Learning : Classify image of flowers using VGG16NET pretrained model_
+## _DAY6_ : _Transfer Learning (Part 1) : Classify image of flowers using VGG16NET pretrained model_
+
+In this exercise I'll be retraining a neural network on a pytorch framework. Ths trained pytorch model used is VGG16 NET  having a total number of parameters = `138357544`
+
+## _DAY7_ : _Transfer Learning (Part 2) : Neural Style Transfer using VGG19_
