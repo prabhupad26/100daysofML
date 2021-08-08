@@ -127,6 +127,9 @@ Cross entropy loss is used for calculating the output error :
 
 
 ## _DAY5_ : _Car Price Prediction (Kaggle competition)_
+
+> Kaggle Notebook can be viewed [here](https://www.kaggle.com/mohaiminul101/car-price-prediction)
+
 * Given a dataset of car prices for old cars along with features like year, engine, mileage, seater, etc. the learning model should make prediction using these features.
 * EDA (Exploratory data analysis) Observations and Processing data for better results  :
    1. Converted categorical text data to numeric data for `mileage, engine, max_power, fuel, seller_type, transmission, owner` columns.
@@ -138,3 +141,4 @@ Cross entropy loss is used for calculating the output error :
 * Training and evaluating the ML model with different learning algorithms :
    1. Random forest regression shows the best accuracy score of ~0.97 on the testing data and ~0.98 on the training data (`number of estimators used : 100`).
    2. Linear regression didn't perform well on this data. (Accuracy score : ~0.67)
+   3. On removing the skewness in the data using its log values (for `selling_price`, `km_driven`, `years_old`) the linear regression performance improved by 0.84 on train data and 0.85 on testing data.
