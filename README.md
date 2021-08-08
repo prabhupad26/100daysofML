@@ -145,3 +145,6 @@ Cross entropy loss is used for calculating the output error :
 
 
 ## _DAY6_ : _Transfer Learning : Classify image of flowers using VGG16NET pretrained model_
+
+In this exercise I'll be retraining a neural network on a pytorch framework. Ths trained pytorch model used is VGG16 NET  having a total number of parameters = `138357544`
+
