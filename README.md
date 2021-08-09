@@ -178,6 +178,11 @@ In this excercise I have experimented with the neural network to understand the 
 
 ## _DAY8_ : _Pytorch_Tutorials_Saving and loading a trained model_
 
-I'll be train a neural network and save its model parameters and optimizers to a `checkpoint.pth.tar` file then load those parameters from the file again and test the model with a sample input.
+* I'll train a neural network and save its model parameters and optimizers to a `checkpoint.pth.tar` file then load those parameters from the file again and test the model with a sample input.
+
+* Install and use tensorboard to see the training results.
+
+![image](https://user-images.githubusercontent.com/11462012/128732621-5cc2235f-1fa6-4db3-a313-abba52504481.png)
+
 
 
