@@ -184,5 +184,5 @@ In this excercise I have experimented with the neural network to understand the 
 
 ![image](https://user-images.githubusercontent.com/11462012/128732621-5cc2235f-1fa6-4db3-a313-abba52504481.png)
 
-
+* Use Learning rate schedule in pytorch (`torch.optim.lr_scheduler`) . 
 
