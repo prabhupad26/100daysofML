@@ -147,5 +147,30 @@ Cross entropy loss is used for calculating the output error :
 ## _DAY6_ : _Transfer Learning (Part 1) : Classify image of flowers using VGG16NET pretrained model_
 
 In this exercise I'll be retraining a neural network on a pytorch framework. Ths trained pytorch model used is VGG16 NET  having a total number of parameters = `138357544`
+out of which I'll be training only ~85k parameters after replacing  the last layer with a fully connected layer with 5 outputs(for training 5 different classes of flowers)  and freezing rest of the params.
+The optimizer I have used is Stocastic gradient descent optimizer and has the below configuration :
+
+   `SGD (
+Parameter Group 0
+    dampening: 0
+    lr: 0.001
+    momentum: 0
+    nesterov: False
+    weight_decay: 0
+)`
+
+With just 2 epochs the Neural network was train with ~3k images with an CrossEntropy error of `0.79` 
 
 ## _DAY7_ : _Transfer Learning (Part 2) : Neural Style Transfer using VGG19_
+
+In this excercise I have experimented with the neural network to understand the concept of transfer learning using pytorch VGG 19 pretrained model to create and an artistic image using a target image and a style image. On an high level I have written a loss function (reference : 1. [Research Paper](https://arxiv.org/abs/1508.06576) 2. [code](https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/more_advanced/neuralstyle)) which calculated :
+   + loss (when forward pass is made) between the target image, generated image
+   + loss (when forward pass is made) between the gram marix of style and generated image - This loss captured the texture of the image.
+* To control these two losses two hyper parameters are defined : 
+        1. alpha : Controls the target image visibility in the generated image.
+        2. berta : Controls the style texture in the generated image.
+
+![image](https://user-images.githubusercontent.com/11462012/128676826-bee21568-38d2-4a08-aa17-b28d70e05f8a.png)
+
+
+## _DAY8_ : __
