@@ -176,4 +176,8 @@ In this excercise I have experimented with the neural network to understand the 
 ![image](https://user-images.githubusercontent.com/11462012/128676826-bee21568-38d2-4a08-aa17-b28d70e05f8a.png)
 
 
-## _DAY8_ : __
+## _DAY8_ : _Pytorch_Tutorials_Saving and loading a trained model_
+
+I'll be train a neural network and save its model parameters and optimizers to a `checkpoint.pth.tar` file then load those parameters from the file again and test the model with a sample input.
+
+
