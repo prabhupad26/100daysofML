@@ -159,7 +159,10 @@ Parameter Group 0
     weight_decay: 0
 )`
 
-With just 2 epochs the Neural network was train with ~3k images with an CrossEntropy error of `0.79` 
+With just 2 epochs the Neural network was train with ~3k images with an CrossEntropy error of `0.87` on training data and shows an accuracy of 77% on testing data. 
+
+![image](https://user-images.githubusercontent.com/11462012/128677834-363f4162-f49b-44b0-8f9d-f6b91dede12e.png)
+
 
 ## _DAY7_ : _Transfer Learning (Part 2) : Neural Style Transfer using VGG19_
 
