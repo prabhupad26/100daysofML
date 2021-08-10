@@ -208,4 +208,4 @@ In this excercise I have experimented with the neural network to understand the 
 
 ![image](https://user-images.githubusercontent.com/11462012/128881657-09459d84-72ee-4617-a2d1-f7d2033b9bba.png)
 
-
+x
