@@ -93,6 +93,9 @@ For training the model the vector representation is used which was created earli
 
 
 ## _DAY4_ : _Predicting handwritten digits using MNIST dataset with Pytorch framework_
+
+> [Link](https://github.com/prabhupad26/100daysofML/blob/main/DAY4_MNIST_DATA_pytorch.ipynb) to python notebook .
+
 In this exercise I'll be using the pytorch framework to train 2 fully connected neural network (Linear layers) to learn to predict the handwritten digit given a 28 * 28 dimension greyscale image obtained from torchvision inbuild API.
 
 * Data creation for the ML model
@@ -128,6 +131,8 @@ Cross entropy loss is used for calculating the output error :
 
 ## _DAY5_ : _Car Price Prediction (Kaggle competition)_
 
+> [Link](https://github.com/prabhupad26/100daysofML/blob/main/DAY5_Car_Prices_Prediction.ipynb) to python notebook.
+
 > Kaggle Notebook can be viewed [here](https://www.kaggle.com/mohaiminul101/car-price-prediction)
 
 * Given a dataset of car prices for old cars along with features like year, engine, mileage, seater, etc. the trained model should make prediction of car prices using these features.
@@ -145,6 +150,8 @@ Cross entropy loss is used for calculating the output error :
 
 
 ## _DAY6_ : _Transfer Learning (Part 1) : Classify image of flowers using VGG16NET pretrained model_
+
+> [Link](https://github.com/prabhupad26/100daysofML/blob/main/DAY6_transfer-learning_part1/transfer_learning.ipynb) to python notebook.
 
 In this exercise I'll be retraining a neural network on a pytorch framework. Ths trained pytorch model used is VGG16 NET  having a total number of parameters = `138357544`
 out of which I'll be training only ~85k parameters after replacing  the last layer with a fully connected layer with 5 outputs(for training 5 different classes of flowers)  and freezing rest of the params.
@@ -166,6 +173,8 @@ With just 2 epochs the Neural network was train with ~3k images with an CrossEnt
 
 ## _DAY7_ : _Transfer Learning (Part 2) : Neural Style Transfer using VGG19_
 
+> [Link](https://github.com/prabhupad26/100daysofML/blob/main/DAY7_transfer-learning_part2/transfer_learning.ipynb) to python notebook.
+
 In this excercise I have experimented with the neural network to understand the concept of transfer learning using pytorch VGG 19 pretrained model to create and an artistic image using a target image and a style image. On an high level I have written a loss function (reference : 1. [Research Paper](https://arxiv.org/abs/1508.06576) 2. [code](https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/more_advanced/neuralstyle)) which calculated :
    + loss (when forward pass is made) between the target image, generated image
    + loss (when forward pass is made) between the gram marix of style and generated image - This loss captured the texture of the image.
@@ -178,11 +187,13 @@ In this excercise I have experimented with the neural network to understand the 
 
 ## _DAY8_ : _Pytorch_Tutorials_Saving and loading a trained model_
 
+> [Link](https://github.com/prabhupad26/100daysofML/tree/main/DAY8_pytorch_part_1) to notebooks folder.
+
 * I'll train a neural network and save its model parameters and optimizers to a `checkpoint.pth.tar` file then load those parameters from the file again and test the model with a sample input.
 
 * Install and use tensorboard to see the training results.
 
 ![image](https://user-images.githubusercontent.com/11462012/128732621-5cc2235f-1fa6-4db3-a313-abba52504481.png)
 
-
+* Use Learning rate schedule in pytorch (`torch.optim.lr_scheduler`) . 
 
