@@ -12,7 +12,7 @@
 > [Link](https://github.com/prabhupad26/100daysofML/blob/main/boston_house_prices_prediction.ipynb) to python notebook .
 
 * EDA (Exploratory data analysis) Observations and Processing data for better results  :
-1.  Correlation between the features (13 features in the dataset) suggests that there's a mix of positive and negative correlated features are present in the dataset, 
+1.  Correlation between the features (13 features in the dataset) suggests that there's a mix of positive and negative correlated features are present in the dataset,
     * In order to avoid the multicollinearity we need to remove either of the feature from a set of highly correlated feature. I tried removing TAX column as `TAX` and `RAD` gave         the highest correlation of 0.91 , simlarly removed `DIS` column as `DIS` and `AGE` gave highly negatively correlation of -0.75.
     * Correlation of `CHAS` is close to 0 i.e. `0.18` which means there is no correlation of `CHAS` to the target variable.
 3.  Correlation between the remaining features to the target variable `MEDV`  suggests that (+)`RM`, (+)`LSTAT`, (-)`PTRATIO` are highly (positively or negatively) correlated with the target variable, so these features should be sufficient for predicting the target variable.
@@ -23,7 +23,7 @@
     * _Need to tryout other approaches like : Z-score, Trimming the outliers, MW U-Test, Robust statistics, bootstraping to find out if its a useful outlier or not._
 
 * Creating train and test data :
-Since I was only able to obtain ~500 records with 10 relevant features so I'm splitting the data in 80/20 ratio and before doing that I have shuffled the data so that is doesn't create any bias (which will lead to bias problem or under fitting problem). 
+Since I was only able to obtain ~500 records with 10 relevant features so I'm splitting the data in 80/20 ratio and before doing that I have shuffled the data so that is doesn't create any bias (which will lead to bias problem or under fitting problem).
 
 * Training and evaluating the ML model with different learning algorithms :
 1. Ordinary Least Square (OLS) : This is a good algorithm to start with for getting an understanding about how well a linear model is able to fit the data available, this is also know for it speed and performance with less data. So with the shuffled training set I got an r^2 score of ~ 0.65, from the learning curve it seems the the model converges very early (at training size 100 - 150). Other metrics like MSE, RMSE, MAE, R-squared scores are not good using the testing data.
@@ -32,7 +32,7 @@ Since I was only able to obtain ~500 records with 10 relevant features so I'm sp
 4. K-Nearest-Neighbor : Using 10 Number of neighbours gave ~ 0.64 as r^2 score on the training data, even on increasing the number of neightbors it worse results. Other metrics like MSE, RMSE, MAE, R-squared scores are not good using the testing data.
 
 **Conclusion :**
-While there are other algorithms which I would like to try out, but for now I'll conclude that the Random forest regressor is by far the best model which perfectly fits the linear curve on the data and predicts accurate MEDV for the given set of features. 
+While there are other algorithms which I would like to try out, but for now I'll conclude that the Random forest regressor is by far the best model which perfectly fits the linear curve on the data and predicts accurate MEDV for the given set of features.
 
 
 ## _DAY2_ : _Titanic survival probability prediction_
@@ -42,7 +42,7 @@ While there are other algorithms which I would like to try out, but for now I'll
 
 * EDA (Exploratory data analysis) Observations and Processing data for better results  :
 1. Null values found in :
-      * 687 rows with no Cabin data : Column will be removed as it doesn't much help in predicting `Survival`. 
+      * 687 rows with no Cabin data : Column will be removed as it doesn't much help in predicting `Survival`.
       * 2 rows with no Embarked data : Missing data will be replaced with 0 while converting the text data to numeric data.
       * 177 rows with no Age data : Missing data will be replaced with the median of Age for every possible combination of `Pclass` and `Gender`.
 2. Most passenger who survived are Female.
@@ -54,7 +54,7 @@ While there are other algorithms which I would like to try out, but for now I'll
 
 
 * Creating train and test data :
-Since only 891 records are available with 9 relevant (1 handcrafted feature) features so I'm splitting the data in 80/20 ratio and before doing that I have shuffled the data so that is doesn't create any bias (which will lead to bias problem or under fitting problem). 
+Since only 891 records are available with 9 relevant (1 handcrafted feature) features so I'm splitting the data in 80/20 ratio and before doing that I have shuffled the data so that is doesn't create any bias (which will lead to bias problem or under fitting problem).
 
 * Training and evaluating the ML model with different learning algorithms :
 Here is the summary of all the algorithm trained and tested :
@@ -88,7 +88,7 @@ For training the model the vector representation is used which was created earli
 
 * Model Evaluation :
 1. Confusion matrix shows a very good results , shows very few False Positives and False Negatives.
-2. ROC Curve shows for every news category the AUC is around 0.90 - 1.0 
+2. ROC Curve shows for every news category the AUC is around 0.90 - 1.0
 3. From the PR curve it looks there are chances of class imbalance for those categories which has lower Area Under the Curve, so the model could be a bit biased towards the other categories which has greater AUC. This could be avoided by including more data for those categories with less AUC.
 
 
@@ -142,7 +142,7 @@ Cross entropy loss is used for calculating the output error :
    3. Removed `name, torque, year` as it doesn't have any useful numeric (there might be a possibility to convert torque to power need to check this) data.
    4. There are ~200 rows missing data for few columns, dropping those data.
    5. `seats` has very less correlation (almost 0) with the selling price, removing that column.
- 
+
 * Training and evaluating the ML model with different learning algorithms :
    1. Random forest regression shows the best accuracy score of ~0.97 on the testing data and ~0.98 on the training data (`number of estimators used : 100`).
    2. Linear regression didn't perform well on this data. (Accuracy score : ~0.67)
@@ -166,7 +166,7 @@ Parameter Group 0
     weight_decay: 0
 )`
 
-With just 2 epochs the Neural network was train with ~3k images with an CrossEntropy error of `0.87` on training data and shows an accuracy of 77% on testing data. 
+With just 2 epochs the Neural network was train with ~3k images with an CrossEntropy error of `0.87` on training data and shows an accuracy of 77% on testing data.
 
 ![image](https://user-images.githubusercontent.com/11462012/128677834-363f4162-f49b-44b0-8f9d-f6b91dede12e.png)
 
@@ -178,7 +178,7 @@ With just 2 epochs the Neural network was train with ~3k images with an CrossEnt
 In this excercise I have experimented with the neural network to understand the concept of transfer learning using pytorch VGG 19 pretrained model to create and an artistic image using a target image and a style image. On an high level I have written a loss function (reference : 1. [Research Paper](https://arxiv.org/abs/1508.06576) 2. [code](https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/more_advanced/neuralstyle)) which calculated :
    + loss (when forward pass is made) between the target image, generated image
    + loss (when forward pass is made) between the gram marix of style and generated image - This loss captured the texture of the image.
-* To control these two losses two hyper parameters are defined : 
+* To control these two losses two hyper parameters are defined :
         1. alpha : Controls the target image visibility in the generated image.
         2. berta : Controls the style texture in the generated image.
 
@@ -195,7 +195,7 @@ In this excercise I have experimented with the neural network to understand the 
 
 ![image](https://user-images.githubusercontent.com/11462012/128732621-5cc2235f-1fa6-4db3-a313-abba52504481.png)
 
-* Use Learning rate schedule in pytorch (`torch.optim.lr_scheduler`) . 
+* Use Learning rate schedule in pytorch (`torch.optim.lr_scheduler`) .
 
 
 ## _DAY9_ : _Pytorch_RNN LSTM GRU on MNIST Dataset_
@@ -208,4 +208,6 @@ In this excercise I have experimented with the neural network to understand the 
 
 ![image](https://user-images.githubusercontent.com/11462012/128881657-09459d84-72ee-4617-a2d1-f7d2033b9bba.png)
 
-x
+* References:
+  - http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+  - https://colah.github.io/posts/2015-08-Understanding-LSTMs/
