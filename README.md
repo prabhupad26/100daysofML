@@ -211,3 +211,6 @@ In this excercise I have experimented with the neural network to understand the 
 * References:
   - http://karpathy.github.io/2015/05/21/rnn-effectiveness/
   - https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+
+
+## _DAY10_ : _Seq2Seq (Eng2German) Translation transformer implementation (pytorch)_
