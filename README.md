@@ -197,3 +197,15 @@ In this excercise I have experimented with the neural network to understand the 
 
 * Use Learning rate schedule in pytorch (`torch.optim.lr_scheduler`) . 
 
+
+## _DAY9_ : _Pytorch_RNN LSTM GRU on MNIST Dataset_
+
+> [Link](https://github.com/prabhupad26/100daysofML/blob/main/DAY9_pytorch_part2/pytorch_lstm_rnn_gru.ipynb) to notebooks folder.
+
+* I'll train RNN, LSTM, GRU and compare the results on the MNIST dataset.
+
+* Here is the model accuracy and training loss comparison between the 3 neural nets I trained on the MNIST dataset :
+
+![image](https://user-images.githubusercontent.com/11462012/128881657-09459d84-72ee-4617-a2d1-f7d2033b9bba.png)
+
+
