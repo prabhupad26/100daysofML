@@ -220,3 +220,6 @@ In this excercise I have experimented with the neural network to understand the 
    - [Tensor2tensor notebook to understand self attention](https://colab.research.google.com/github/tensorflow/tensor2tensor/blob/master/tensor2tensor/notebooks/hello_t2t.ipynb#scrollTo=OJKU36QAfqOC)
    - Research paper - [Attention is all you need](https://arxiv.org/pdf/1706.03762.pdf)
    - [Blog post exmplaining transformer](http://jalammar.github.io/illustrated-transformer/)
+   - [Pytorch implementation guide](http://nlp.seas.harvard.edu/2018/04/03/attention.html)
+   - [Visualize positional encoding code](https://github.com/jalammar/jalammar.github.io/blob/master/notebookes/transformer/transformer_positional_encoding_graph.ipynb)
+   - 
