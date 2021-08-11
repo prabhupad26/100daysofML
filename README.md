@@ -218,5 +218,5 @@ In this excercise I have experimented with the neural network to understand the 
 
 **References :**
    - [Tensor2tensor notebook to understand self attention](https://colab.research.google.com/github/tensorflow/tensor2tensor/blob/master/tensor2tensor/notebooks/hello_t2t.ipynb#scrollTo=OJKU36QAfqOC)
-   - Research papaer - [Attention is all you need](https://arxiv.org/pdf/1706.03762.pdf)
+   - Research paper - [Attention is all you need](https://arxiv.org/pdf/1706.03762.pdf)
    - [Blog post exmplaining transformer](http://jalammar.github.io/illustrated-transformer/)
