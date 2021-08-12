@@ -223,3 +223,7 @@ In this excercise I have experimented with the neural network to understand the 
    - [Pytorch implementation guide](http://nlp.seas.harvard.edu/2018/04/03/attention.html)
    - [Visualize positional encoding code](https://github.com/jalammar/jalammar.github.io/blob/master/notebookes/transformer/transformer_positional_encoding_graph.ipynb)
    - 
+
+
+## _DAY11_ : _Bi directional LSTMs (pytorch)_
+
