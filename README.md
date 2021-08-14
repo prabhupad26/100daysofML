@@ -234,7 +234,36 @@ Here I have used a hand crafted dataset for training the model
 
 ## __DAY12__ : __Generating sine waves using LSTMs__
 
+* Training Data :
+   - Data is created using `numpy` library, created 100 data points (sine waves y - axis) with 1000 time steps (sine waves x-axis).
+ * Learning :
+   - The optimizer used here is the `LBFGS` algorithm with a learning rate of `0.8` 
+
+
 I'll be  training a LSTM network to generate sine waves : 
 
 ![image](https://user-images.githubusercontent.com/11462012/129445031-a4f5a294-5701-4df1-bb98-cdeb135be49a.png)
 
+* References
+   - [Pytorch example](https://github.com/pytorch/examples/tree/master/time_sequence_prediction)
+
+
+## __DAY13__ : __Simple GAN to train train Generator to produce fake images from MNIST dataset__
+
+
+![image](https://user-images.githubusercontent.com/11462012/129450853-3f447f49-327b-4027-a530-a5b0633eca77.png)
+
+* References
+   - [Article on GANs](https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/)
+
+> * Code to run tensorboard on google colab :
+>     `%load_ext tensorboard`
+>     `%tensorboard --logdir logs`
+
+
+## __DAY14__ : __Effective LSTMs for Target-Dependent Sentiment Classification (RP : Day 1 of 5)__
+
+* Overview:
+   
+* References :
+   - [Pytorch implementation](https://github.com/hiyouga/PBAN-PyTorch)
