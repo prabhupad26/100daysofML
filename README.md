@@ -227,3 +227,6 @@ In this excercise I have experimented with the neural network to understand the 
 
 ## _DAY11_ : _Bi directional LSTMs (pytorch)_
 
+
+I train a Bidirectional LSTM , an LSTM with 2 input which takes original sequence as one input and a reverse of that input which help the neural network to capture the future data as well and the output will consist of those future context as well.
+Here I have used a hand crafted dataset for training the model 
