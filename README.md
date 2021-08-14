@@ -256,6 +256,10 @@ I'll be  training a LSTM network to generate sine waves :
 * References
    - [Article on GANs](https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/)
 
+> * Code to run tensorboard on google colab :
+>     `%load_ext tensorboard`
+>     `%tensorboard --logdir logs`
+
 
 ## __DAY14__ : __Effective LSTMs for Target-Dependent Sentiment Classification (RP : Day 1 of 5)__
 
