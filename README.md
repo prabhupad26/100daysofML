@@ -238,6 +238,8 @@ Here I have used a hand crafted dataset for training the model
    - Data is created using `numpy` library, created 100 data points (sine waves y - axis) with 1000 time steps (sine waves x-axis).
  * Learning :
    - The optimizer used here is the `LBFGS` algorithm with a learning rate of `0.8` 
+
+
 I'll be  training a LSTM network to generate sine waves : 
 
 ![image](https://user-images.githubusercontent.com/11462012/129445031-a4f5a294-5701-4df1-bb98-cdeb135be49a.png)
