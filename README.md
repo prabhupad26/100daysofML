@@ -244,11 +244,17 @@ I'll be  training a LSTM network to generate sine waves :
 
 ![image](https://user-images.githubusercontent.com/11462012/129445031-a4f5a294-5701-4df1-bb98-cdeb135be49a.png)
 
+* References
+   - [Pytorch example](https://github.com/pytorch/examples/tree/master/time_sequence_prediction)
 
-## __DAY13__ : __Simple GAN to train Generator to produce fake images from MNIST dataset__
+
+## __DAY13__ : __Simple GAN to train train Generator to produce fake images from MNIST dataset__
 
 
 ![image](https://user-images.githubusercontent.com/11462012/129450853-3f447f49-327b-4027-a530-a5b0633eca77.png)
+
+* References
+   - [Article on GANs](https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/)
 
 
 ## __DAY14__ : __Effective LSTMs for Target-Dependent Sentiment Classification (RP : Day 1 of 5)__
