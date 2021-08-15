@@ -267,3 +267,5 @@ I'll be  training a LSTM network to generate sine waves :
    
 * References :
    - [Pytorch implementation](https://github.com/hiyouga/PBAN-PyTorch)
+
+## __DAY15__ : __Effective LSTMs for Target-Dependent Sentiment Classification (RP : Day 2 of 5)__
