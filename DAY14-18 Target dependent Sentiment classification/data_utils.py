@@ -24,7 +24,7 @@ def parseXML(data_path):
 
 
 def build_tokenizer(fnames, max_length, data_file):
-    if not os.path.exists(data_file):
+    if os.path.exists(data_file):
         print('loading tokenizer:', data_file)
         tokenizer = pickle.load(open(data_file, 'rb'))
     else:
@@ -179,7 +179,7 @@ def _load_wordvec(data_path, vocab=None):
 
 
 def build_embedding_matrix(vocab, embed_dim, data_file):
-    if not os.path.exists(data_file):
+    if os.path.exists(data_file):
         print('loading embedding matrix:', data_file)
         embedding_matrix = pickle.load(open(data_file, 'rb'))
     else:
