@@ -284,7 +284,15 @@ I'll be  training a LSTM network to generate sine waves :
    
    ![image](https://user-images.githubusercontent.com/11462012/129765477-48853407-690a-4c3b-92bf-4b21f6f45a81.png)
 
-  
+ * Sample Examples :
+   * Aspect Embedded LSTM Network Result (Target Dependent LSTM) : 
+   
+   - ![image](https://user-images.githubusercontent.com/11462012/129766080-4aeeef07-fe30-469e-be55-013d931cadf0.png)
+   
+   * Normal LSTM output :
+   
+   - ![image](https://user-images.githubusercontent.com/11462012/129766379-a1c6b05f-4da6-46bc-897a-8c0ecf0b3af5.png)
+
 
  * Code References :
    - [Pytorch implementation](https://github.com/hiyouga/PBAN-PyTorch)
