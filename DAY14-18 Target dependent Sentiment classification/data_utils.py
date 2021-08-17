@@ -24,7 +24,7 @@ def parseXML(data_path):
 
 
 def build_tokenizer(fnames, max_length, data_file):
-    if os.path.exists(data_file):
+    if not os.path.exists(data_file):
         print('loading tokenizer:', data_file)
         tokenizer = pickle.load(open(data_file, 'rb'))
     else:
@@ -55,6 +55,7 @@ class Vocab(object):
             self._length += 1
         for w, i in self._vocab_dict.items():
             self._reverse_vocab_dict[i] = w
+        print('End')
 
     def word_to_id(self, word):
         if hasattr(self, 'unk_id'):
@@ -178,14 +179,14 @@ def _load_wordvec(data_path, vocab=None):
 
 
 def build_embedding_matrix(vocab, embed_dim, data_file):
-    if os.path.exists(data_file):
+    if not os.path.exists(data_file):
         print('loading embedding matrix:', data_file)
         embedding_matrix = pickle.load(open(data_file, 'rb'))
     else:
         print('loading word vectors...')
         embedding_matrix = np.zeros((len(vocab), embed_dim))
-        fname = './glove/glove.twitter.27B/glove.twitter.27B.' + str(
-            embed_dim) + 'd.txt' if embed_dim != 300 else './glove/glove.42B.300d.txt'
+        fname = '../data/td_lstm_datasets/glove.twitter.27B/glove.twitter.27B.' + str(
+            embed_dim) + 'd.txt'
         word_vec = _load_wordvec(fname, vocab)
         for i in range(len(vocab)):
             vec = word_vec.get(vocab.id_to_word(i))
@@ -200,12 +201,12 @@ if __name__ == '__main__':
     tokenizer = build_tokenizer(
         fnames=data_files,
         max_length=80,
-        data_file='datasets/{0}_tokenizer.dat'.format('restaurant'))
+        data_file='datasets/{0}_tokenizer.dat'.format('laptops'))
     print(tokenizer)
     embedding_matrix = build_embedding_matrix(
         vocab=tokenizer.vocab,
         embed_dim=200,
-        data_file='datasets/{0}d_{1}_embedding_matrix.dat'.format('200', 'restaurant'))
+        data_file='datasets/{0}d_{1}_embedding_matrix.dat'.format('200', 'laptops'))
     print(embedding_matrix.shape)
     trainset = SentenceDataset(data_files[0] , tokenizer, target_dim=3)
     testset = SentenceDataset(data_files[1] , tokenizer, target_dim=3)
