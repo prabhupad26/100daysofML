@@ -277,7 +277,9 @@ I'll be  training a LSTM network to generate sine waves :
   If the input sentence is : "I really liked the laptop but not because of its Windows 8 Operating System" and the target information is : "Windows 8" then the polarity of this sentence should be "negative". 
   
  * Model training :
-   - The tokenizer is created by capturing all the words in the train, test dataset (using the xml parser in `data_utils.py`) 
+   - The tokenizer is created by capturing all the words in the train, test dataset (using the xml parser in `data_utils.py`) . Now after this a vocabulary is created out of all these words and is indexed.
+   - The word vector is loaded from the file and using this the dataset(each word in every example) is converted to the vector form (I have used the 200d vector in this exercise).
+   
   
  
  * Model Evaluation : 
