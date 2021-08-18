@@ -303,7 +303,14 @@ I'll be  training a LSTM network to generate sine waves :
    - [Pytorch implementation](https://github.com/hiyouga/PBAN-PyTorch)
 
 
-## __DAY19__ : __VQGAN and CLIP Art generation from text (Research Paper Implementation)__
+## __DAY19__ : __CLIP by OpenAI (Research Paper Implementation)__
+
+
+* References :
+  - https://openai.com/blog/clip/#rf2
+  - https://github.com/openai/CLIP
+  - paper - https://arxiv.org/pdf/2103.00020.pdf
+
 
 * To explore : 
    - https://github.com/tensorflow/compression
