@@ -261,7 +261,7 @@ I'll be  training a LSTM network to generate sine waves :
 >     `%tensorboard --logdir logs`
 
 
-## __DAY14 - 18__ : __Effective LSTMs for Target-Dependent Sentiment Classification__
+## __DAY14 - 18__ : __Effective LSTMs for Target-Dependent Sentiment Classification (Research Paper Implementation)__
 
 * Overview:
    In this paper it has been shown that by providing target information to an LSTM model can significantly boost the performance of the model in classifying the sentiment for the sentence. Sentiment analysis is a classic problem in NLP in which the polarity of the input (sentence) is to be predicted (polarity like : Good review ,Neutral review, Bad review, Worse review etc.). In this paper there are two LSTMs model has been proposed in which both the models are trained with the context words as well as target words.
@@ -302,3 +302,8 @@ I'll be  training a LSTM network to generate sine waves :
  * Code References :
    - [Pytorch implementation](https://github.com/hiyouga/PBAN-PyTorch)
 
+
+## __DAY19__ : __VQGAN and CLIP Art generation from text (Research Paper Implementation)__
+
+* To explore : 
+   - https://github.com/tensorflow/compression
