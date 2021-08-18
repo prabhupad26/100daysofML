@@ -314,3 +314,4 @@ I'll be  training a LSTM network to generate sine waves :
 
 * To explore : 
    - https://github.com/tensorflow/compression
+   - https://ljvmiranda921.github.io/notebook/2021/08/08/clip-vqgan/
