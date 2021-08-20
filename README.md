@@ -311,7 +311,6 @@ I'll be  training a LSTM network to generate sine waves :
   - https://github.com/openai/CLIP
   - paper - https://arxiv.org/pdf/2103.00020.pdf
 
-![](https://komarev.com/ghpvc/?username=prabhupad26)
 
 * To explore : 
    - https://github.com/tensorflow/compression
