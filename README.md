@@ -310,7 +310,14 @@ I'll be  training a LSTM network to generate sine waves :
    - There is a pretraining step which is also called as contrastive learnining step in which the model is trained on the Image representation (created by a transformer as an encoder) and Text representation (created by another encoder) from scratch, the objective of this training is to maximize the cosine similarity between the `N` real/correct pairs of image representation and the text representation and minimizing the `N^2 - N` incorrect set of pairs, optimized using a cross entropy. This training creates a  multimodal embedded  representation which is further used for zero shot classification. The temperature parameter which estimates the range of logits in the softmax function output is trained as log parameterized multiplicative scalar.
    - Modification in ResNET-50 (Base model architecture) the global average pooling layer is replaced with an attention pooling layer, this attention layer is the transformer style QKV attention, the query is conditioned on global average pooled representation. 
    - The text encoder is also a transformer layer which operated on byte pair encoded representation of text, with a sequence limit of 76 token each sequence is appended / padded with the \[SOS] \[EOS] tokens 
-   -  
+
+
+* I tried this model with some of my sample images here are the results :
+   
+   ![image](https://user-images.githubusercontent.com/11462012/130329167-907fcbaf-f39d-41d1-8b99-0a1a86042da3.png)
+   
+   > Apparantly this model think I'm a kid :-D  
+
 
 * References :
   - https://openai.com/blog/clip/#rf2
