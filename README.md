@@ -304,7 +304,13 @@ I'll be  training a LSTM network to generate sine waves :
 
 
 ## __DAY19-25__ : __CLIP by OpenAI (Research Paper Implementation)__
-* 
+* Title of the paper - Learning Transferable visual models from Natural Language Supervision.
+* This paper has focussed on the idea of learning the image representation with the supervision of text representation. The resultant model has the capability to perform classification tasks without any training data (AKA Zero shot learning classification). This model was able to preform with a significant accuracy on different image data sets like ImageNet.
+* Model training :
+   - There is a pretraining step which is also called as contrastive learnining step in which the model is trained on the Image representation (created by a transformer as an encoder) and Text representation (created by another encoder) from scratch, the objective of this training is to maximize the cosine similarity between the `N` real/correct pairs of image representation and the text representation and minimizing the `N^2 - N` incorrect set of pairs, optimized using a cross entropy. This training creates a  multimodal embedded  representation which is further used for zero shot classification. The temperature parameter which estimates the range of logits in the softmax function output is trained as log parameterized multiplicative scalar.
+   - Modification in ResNET-50 (Base model architecture) the global average pooling layer is replaced with an attention pooling layer, this attention layer is the transformer style QKV attention, the query is conditioned on global average pooled representation. 
+   - The text encoder is also a transformer layer which operated on byte pair encoded representation of text, with a sequence limit of 76 token each sequence is appended / padded with the \[SOS] \[EOS] tokens 
+   -  
 
 * References :
   - https://openai.com/blog/clip/#rf2
