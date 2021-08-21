@@ -261,7 +261,7 @@ I'll be  training a LSTM network to generate sine waves :
 >     `%tensorboard --logdir logs`
 
 
-## __DAY14 - 18__ : __Effective LSTMs for Target-Dependent Sentiment Classification__
+## __DAY14 - 18__ : __Effective LSTMs for Target-Dependent Sentiment Classification (Research Paper Implementation)__
 
 * Overview:
    In this paper it has been shown that by providing target information to an LSTM model can significantly boost the performance of the model in classifying the sentiment for the sentence. Sentiment analysis is a classic problem in NLP in which the polarity of the input (sentence) is to be predicted (polarity like : Good review ,Neutral review, Bad review, Worse review etc.). In this paper there are two LSTMs model has been proposed in which both the models are trained with the context words as well as target words.
@@ -277,7 +277,9 @@ I'll be  training a LSTM network to generate sine waves :
   If the input sentence is : "I really liked the laptop but not because of its Windows 8 Operating System" and the target information is : "Windows 8" then the polarity of this sentence should be "negative". 
   
  * Model training :
-   - The tokenizer is created by capturing all the words in the train, test dataset (using the xml parser in `data_utils.py`) 
+   - The tokenizer is created by capturing all the words in the train, test dataset (using the xml parser in `data_utils.py`) . Now after this a vocabulary is created out of all these words and is indexed.
+   - The word vector is loaded from the file and using this the dataset(each word in every example) is converted to the vector form (I have used the 200d vector in this exercise).
+   
   
  
  * Model Evaluation : 
@@ -300,3 +302,29 @@ I'll be  training a LSTM network to generate sine waves :
  * Code References :
    - [Pytorch implementation](https://github.com/hiyouga/PBAN-PyTorch)
 
+
+## __DAY19-25__ : __CLIP by OpenAI (Research Paper Implementation)__
+* Title of the paper - Learning Transferable visual models from Natural Language Supervision.
+* This paper has focussed on the idea of learning the image representation with the supervision of text representation. The resultant model has the capability to perform classification tasks without any training data (AKA Zero shot learning classification). This model was able to preform with a significant accuracy on different image data sets like ImageNet.
+* Model training :
+   - There is a pretraining step which is also called as contrastive learnining step in which the model is trained on the Image representation (created by a transformer as an encoder) and Text representation (created by another encoder) from scratch, the objective of this training is to maximize the cosine similarity between the `N` real/correct pairs of image representation and the text representation and minimizing the `N^2 - N` incorrect set of pairs, optimized using a cross entropy. This training creates a  multimodal embedded  representation which is further used for zero shot classification. The temperature parameter which estimates the range of logits in the softmax function output is trained as log parameterized multiplicative scalar.
+   - Modification in ResNET-50 (Base model architecture) the global average pooling layer is replaced with an attention pooling layer, this attention layer is the transformer style QKV attention, the query is conditioned on global average pooled representation. 
+   - The text encoder is also a transformer layer which operated on byte pair encoded representation of text, with a sequence limit of 76 token each sequence is appended / padded with the \[SOS] \[EOS] tokens 
+
+
+* I tried this model with some of my sample images here are the results :
+   
+   ![image](https://user-images.githubusercontent.com/11462012/130329167-907fcbaf-f39d-41d1-8b99-0a1a86042da3.png)
+   
+   > Apparantly this model think I'm a kid 😕😄🤣🤣🤣
+
+
+* References :
+  - https://openai.com/blog/clip/#rf2
+  - https://github.com/openai/CLIP
+  - paper - https://arxiv.org/pdf/2103.00020.pdf
+
+
+* To explore : 
+   - https://github.com/tensorflow/compression
+   - https://ljvmiranda921.github.io/notebook/2021/08/08/clip-vqgan/
