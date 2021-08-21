@@ -316,7 +316,7 @@ I'll be  training a LSTM network to generate sine waves :
    
    ![image](https://user-images.githubusercontent.com/11462012/130329167-907fcbaf-f39d-41d1-8b99-0a1a86042da3.png)
    
-   > Apparantly this model think I'm a kid :-D  
+   > Apparantly this model think I'm a kid 😕😄🤣🤣🤣
 
 
 * References :
