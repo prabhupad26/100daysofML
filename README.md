@@ -303,8 +303,8 @@ I'll be  training a LSTM network to generate sine waves :
    - [Pytorch implementation](https://github.com/hiyouga/PBAN-PyTorch)
 
 
-## __DAY19__ : __CLIP by OpenAI (Research Paper Implementation)__
-
+## __DAY19-25__ : __CLIP by OpenAI (Research Paper Implementation)__
+* 
 
 * References :
   - https://openai.com/blog/clip/#rf2
