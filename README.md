@@ -321,6 +321,16 @@ I'll be  training a LSTM network to generate sine waves :
    - There are multiple cases in which the text ender of CLIP isn't provided with enough context for the model to make accurate prediction, most of the cases in which single word is provided as the target label. But since the model is pretrained with the test data which somewhat describes the images so this creates a distribution gap which is resolved by doing prompt engineering.
    - Few templates are create like : `A photo of a bug {label}` etc. and these templates are configures with those single word labels. This helps the model to get a significant improvement in identifying the input images.
 
+* A frontend which shows the application of CLIP :
+  - A simple GUI in which any of the dataset can be selected (even custom dataset) and any pre trained model can be selected.
+  - There are two ways to demonstrate the application of CLIP:
+      1. (Obtain image from text description) Enter a text which describe the image and the image will be presented after getting the prediction from the model.
+      ![image](https://user-images.githubusercontent.com/11462012/130812087-acd27ef8-9e7b-4c6e-9f55-dbc8d73e142a.png)
+
+      2. (Obtain class from image as input) An image should be uploaded to the GUI and top 5 predicted classes will be displayed. 
+      ![image](https://user-images.githubusercontent.com/11462012/130812184-3cf915bf-d53a-4ac2-8e38-2795b303c88d.png)
+
+
 
 * References :
   - https://openai.com/blog/clip/#rf2
