@@ -362,7 +362,8 @@ We will be using the base check point of a pretrained `wav2vec 2.0` ASR model wh
 
 **Dataset used for fine-tuning:** `timit_asr` corpus containing 5300 labeled (both test-1680 and train-4620 dataset) speech of sentences recorded by [630 speakers](https://huggingface.co/datasets/timit_asr). The wav2vec2.0 model has performed the [best](https://paperswithcode.com/sota/speech-recognition-on-timit) on this dataset for a automatic speech recognition task. In this exercise we will be using this learning model to get the Text out of Speech.
 
-
-
+**References**
+1. [Fine tune Wave2vec2 for English ASR with 🤗 transformer](https://huggingface.co/blog/fine-tune-wav2vec2-english)
+2. [Sequence Modeling with CTC](https://distill.pub/2017/ctc/)
 
 
