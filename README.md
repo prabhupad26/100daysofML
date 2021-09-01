@@ -341,3 +341,15 @@ I'll be  training a LSTM network to generate sine waves :
 * To explore : 
    - https://github.com/tensorflow/compression
    - https://ljvmiranda921.github.io/notebook/2021/08/08/clip-vqgan/
+
+
+
+## __DAY26-31__ : __Speech2Text: Fine Tuning Wav2Vec2 for English Auto Speech Recognition__
+
+**Problem Statement/Task : Convert a voice recording (in a sound file) to text**
+
+Dataset used for fine-tuning: `timit_asr` corpus containing 5300 labeled (both test-1680 and train-4620 dataset) speech of sentences recorded by [630 speakers](https://huggingface.co/datasets/timit_asr). The wav2vec2.0 model has performed the [best](https://paperswithcode.com/sota/speech-recognition-on-timit) on this dataset for a automatic speech recognition task. In this exercise we will be using this learning model to get the Text out of Speech.
+
+
+
+
