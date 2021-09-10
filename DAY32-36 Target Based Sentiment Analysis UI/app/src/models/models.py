@@ -1,62 +1,49 @@
 import torch.nn as nn
 import torch
+from layers import DynamicLSTM, SqueezeEmbedding
 
 
-class DynamicLSTM(nn.Module):
-    """
-    LSTM which can hold variable length sequence, use like TensorFlow's RNN(input, length...).
-    """
+class LSTM(nn.Module):
+    """ Standard LSTM """
 
-    def __init__(self, input_size, hidden_size, num_layers=1, bias=True, batch_first=True, dropout=0,
-                 bidirectional=False, only_use_last_hidden_state=False, rnn_type='LSTM'):
-        super(DynamicLSTM, self).__init__()
-        self.input_size = input_size
-        self.hidden_size = hidden_size
-        self.num_layers = num_layers
-        self.bias = bias
-        self.batch_first = batch_first
-        self.dropout = dropout
-        self.bidirectional = bidirectional
-        self.only_use_last_hidden_state = only_use_last_hidden_state
-        self.rnn_type = rnn_type
+    def __init__(self, embedding_matrix, embed_dim, hidden_dim, polarities_dim):
+        super(LSTM, self).__init__()
+        self.embed = nn.Embedding.from_pretrained(torch.tensor(embedding_matrix, dtype=torch.float))
+        self.lstm = DynamicLSTM(embed_dim, hidden_dim, num_layers=1, batch_first=True)
+        self.dense = nn.Linear(hidden_dim, polarities_dim)
 
-        if self.rnn_type == 'LSTM':
-            self.RNN = nn.LSTM(input_size=input_size, hidden_size=hidden_size, num_layers=num_layers,
-                               bias=bias, batch_first=batch_first, dropout=dropout, bidirectional=bidirectional)
-        elif self.rnn_type == 'GRU':
-            self.RNN = nn.GRU(input_size=input_size, hidden_size=hidden_size, num_layers=num_layers,
-                              bias=bias, batch_first=batch_first, dropout=dropout, bidirectional=bidirectional)
-        elif self.rnn_type == 'RNN':
-            self.RNN = nn.RNN(input_size=input_size, hidden_size=hidden_size, num_layers=num_layers,
-                              bias=bias, batch_first=batch_first, dropout=dropout, bidirectional=bidirectional)
+    def forward(self, inputs):
+        text = inputs[0]
+        x = self.embed(text)
+        x_len = torch.sum(text != 0, dim=-1)
+        _, (h_n, _) = self.lstm(x, x_len)
+        out = self.dense(h_n[0])
+        return out
 
-    def forward(self, x, x_len):
-        """
-        sequence -> sort -> pad and pack -> process using RNN -> unpack -> unsort
-        """
-        '''sort'''
-        x_sort_idx = torch.sort(x_len, descending=True)[1].long()
-        x_unsort_idx = torch.sort(x_sort_idx)[1].long()
-        x_len = x_len[x_sort_idx]
-        x = x[x_sort_idx]
-        '''pack'''
-        x_emb_p = torch.nn.utils.rnn.pack_padded_sequence(x, x_len, batch_first=self.batch_first)
-        ''' process '''
-        if self.rnn_type == 'LSTM':
-            out_pack, (ht, ct) = self.RNN(x_emb_p, None)
-        else:
-            out_pack, ht = self.RNN(x_emb_p, None)
-            ct = None
-        '''unsort'''
-        ht = ht[:, x_unsort_idx]
-        if self.only_use_last_hidden_state:
-            return ht
-        else:
-            out, _ = torch.nn.utils.rnn.pad_packed_sequence(out_pack, batch_first=self.batch_first)
-            if self.batch_first:
-                out = out[x_unsort_idx]
-            else:
-                out = out[:, x_unsort_idx]
-            if self.rnn_type == 'LSTM':
-                ct = ct[:, x_unsort_idx]
-            return out, (ht, ct)
+
+class AE_LSTM(nn.Module):
+    """ LSTM with Aspect Embedding """
+
+    def __init__(self, embedding_matrix, opt):
+        super(AE_LSTM, self).__init__()
+        self.embed = nn.Embedding.from_pretrained(torch.tensor(embedding_matrix, dtype=torch.float))
+        self.squeeze_embedding = SqueezeEmbedding()
+        self.lstm = DynamicLSTM(opt.embed_dim * 2, opt.hidden_dim, num_layers=1, batch_first=True)
+        self.dense = nn.Linear(opt.hidden_dim, opt.polarities_dim)
+
+    def forward(self, inputs):
+        text, aspect_text = inputs[0], inputs[1]
+        x_len = torch.sum(text != 0, dim=-1)
+        x_len_max = torch.max(x_len)
+        aspect_len = torch.sum(aspect_text != 0, dim=-1).float()
+
+        x = self.embed(text)
+        x = self.squeeze_embedding(x, x_len)
+        aspect = self.embed(aspect_text)
+        aspect_pool = torch.div(torch.sum(aspect, dim=1), aspect_len.view(aspect_len.size(0), 1))
+        aspect = torch.unsqueeze(aspect_pool, dim=1).expand(-1, x_len_max, -1)
+        x = torch.cat((aspect, x), dim=-1)
+
+        _, (h_n, _) = self.lstm(x, x_len)
+        out = self.dense(h_n[0])
+        return out

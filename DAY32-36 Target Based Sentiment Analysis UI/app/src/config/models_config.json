@@ -1,0 +1,20 @@
+{
+  "models": {
+    "LSTM": {
+      "checkpoints": {
+        "checkpoint_1": {
+          "name": "200d_embed_model_checkpoint.pt",
+          "embed_dim": "200"
+        }
+      }
+    },
+    "AE": {
+      "checkpoints": {
+        "checkpoint_1": {
+          "checkpoint_name": "200d_embed_modelAE_checkpoint.pt",
+          "embed_dim": "200"
+        }
+      }
+    }
+  }
+}

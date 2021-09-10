@@ -208,6 +208,6 @@ if __name__ == '__main__':
         embed_dim=200,
         data_file='datasets/{0}d_{1}_embedding_matrix.dat'.format('200', 'laptops'))
     print(embedding_matrix.shape)
-    trainset = SentenceDataset(data_files[0] , tokenizer, target_dim=3)
-    testset = SentenceDataset(data_files[1] , tokenizer, target_dim=3)
+    trainset = SentenceDataset(data_files[0], tokenizer, target_dim=3)
+    testset = SentenceDataset(data_files[1], tokenizer, target_dim=3)
     print(trainset, testset)
