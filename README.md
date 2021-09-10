@@ -264,7 +264,7 @@ I'll be  training a LSTM network to generate sine waves :
 ## __DAY14 - 18__ : __Effective LSTMs for Target-Dependent Sentiment Classification (Research Paper Implementation)__
 
 * Overview:
-   In this paper it has been shown that by providing target information to an LSTM model can significantly boost the performance of the model in classifying the sentiment for the sentence. Sentiment analysis is a classic problem in NLP in which the polarity of the input (sentence) is to be predicted (polarity like : Good review ,Neutral review, Bad review, Worse review etc.). In this paper there are two LSTMs model has been proposed in which both the models are trained with the context words as well as target words.
+   In [this](https://arxiv.org/pdf/1512.01100.pdf) paper it has been shown that by providing target information to an LSTM model can significantly boost the performance of the model in classifying the sentiment for the sentence. Sentiment analysis is a classic problem in NLP in which the polarity of the input (sentence) is to be predicted (polarity like : Good review ,Neutral review, Bad review, Worse review etc.). In this paper there are two LSTMs model has been proposed in which both the models are trained with the context words as well as target words.
 * Problem statement example : 
       - Input sentence : "I bought a camera, its picture quality is awesome but the battery life is too short" , here if the target is "picture quality" then the sentiment should be "positive" , but if the target would have been "battery life", then the sentiment would have been "negative".
   
