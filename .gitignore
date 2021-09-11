@@ -13,4 +13,5 @@ repo
 datasets
 repo
 ImageNetV2-matched-frequency*
+*.txt
 *.pt

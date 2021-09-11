@@ -1,6 +1,6 @@
 import torch.nn as nn
 import torch
-from layers import DynamicLSTM, SqueezeEmbedding
+from src.models.layers import DynamicLSTM, SqueezeEmbedding
 
 
 class LSTM(nn.Module):
@@ -22,14 +22,14 @@ class LSTM(nn.Module):
 
 
 class AE_LSTM(nn.Module):
-    """ LSTM with Aspect Embedding """
+    ''' LSTM with Aspect Embedding '''
 
-    def __init__(self, embedding_matrix, opt):
+    def __init__(self, embedding_matrix, embed_dim, hidden_dim, polarities_dim):
         super(AE_LSTM, self).__init__()
         self.embed = nn.Embedding.from_pretrained(torch.tensor(embedding_matrix, dtype=torch.float))
         self.squeeze_embedding = SqueezeEmbedding()
-        self.lstm = DynamicLSTM(opt.embed_dim * 2, opt.hidden_dim, num_layers=1, batch_first=True)
-        self.dense = nn.Linear(opt.hidden_dim, opt.polarities_dim)
+        self.lstm = DynamicLSTM(embed_dim * 2, hidden_dim, num_layers=1, batch_first=True)
+        self.dense = nn.Linear(hidden_dim, polarities_dim)
 
     def forward(self, inputs):
         text, aspect_text = inputs[0], inputs[1]

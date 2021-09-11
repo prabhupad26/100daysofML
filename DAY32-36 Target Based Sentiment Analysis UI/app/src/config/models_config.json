@@ -4,15 +4,23 @@
       "checkpoints": {
         "checkpoint_1": {
           "name": "200d_embed_model_checkpoint.pt",
-          "embed_dim": "200"
+          "dim": {
+            "embed_dim": 200,
+            "hidden_dim": 200,
+            "polarities_dim": 3
+          }
         }
       }
     },
     "AE": {
       "checkpoints": {
         "checkpoint_1": {
-          "checkpoint_name": "200d_embed_modelAE_checkpoint.pt",
-          "embed_dim": "200"
+          "name": "200d_embed_modelAE_checkpoint.pt",
+          "dim": {
+            "embed_dim": 200,
+            "hidden_dim": 200,
+            "polarities_dim": 3
+          }
         }
       }
     }

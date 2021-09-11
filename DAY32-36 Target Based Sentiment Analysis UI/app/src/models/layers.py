@@ -4,9 +4,9 @@ import torch.nn.functional as F
 
 
 class DynamicLSTM(nn.Module):
-    """
-    LSTM which can hold variable length sequence, use like TensorFlow's RNN(input, length...).
-    """
+    '''
+    LSTM which can hold variable length sequence, use like TensorFlow's RNN(input, lenght...).
+    '''
 
     def __init__(self, input_size, hidden_size, num_layers=1, bias=True, batch_first=True, dropout=0,
                  bidirectional=False, only_use_last_hidden_state=False, rnn_type='LSTM'):
@@ -32,9 +32,9 @@ class DynamicLSTM(nn.Module):
                               bias=bias, batch_first=batch_first, dropout=dropout, bidirectional=bidirectional)
 
     def forward(self, x, x_len):
-        """
+        '''
         sequence -> sort -> pad and pack -> process using RNN -> unpack -> unsort
-        """
+        '''
         '''sort'''
         x_sort_idx = torch.sort(x_len, descending=True)[1].long()
         x_unsort_idx = torch.sort(x_sort_idx)[1].long()
@@ -64,9 +64,9 @@ class DynamicLSTM(nn.Module):
 
 
 class SqueezeEmbedding(nn.Module):
-    """
+    '''
     Squeeze sequence embedding length to the longest one in the batch
-    """
+    '''
 
     def __init__(self, batch_first=True):
         super(SqueezeEmbedding, self).__init__()

@@ -1,0 +1,18 @@
+{
+  "datasets": {
+    "laptop_reviews": {
+      "file_train": "Laptops_Train.xml",
+      "file_test": "Laptops_Test.xml",
+      "file_trial": "Laptops_Trial.xml",
+      "file_tokenized": "laptops_tokenizer.dat",
+      "file_embed_matrix": "200d_laptops_embedding_matrix.dat"
+    },
+    "restaurants_reviews": {
+      "file_train": "Restaurants_Train.xml",
+      "file_test": "Restaurants_Test.xml",
+      "file_trial": "Restaurants_Trial.xml",
+      "file_tokenized": "restaurants_tokenizer.dat",
+      "file_embed_matrix": "200d_restaurants_embedding_matrix.dat"
+    }
+  }
+}

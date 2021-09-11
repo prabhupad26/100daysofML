@@ -185,7 +185,7 @@ def build_embedding_matrix(vocab, embed_dim, data_file):
     else:
         print('loading word vectors...')
         embedding_matrix = np.zeros((len(vocab), embed_dim))
-        fname = 'app/src/data/datasets/glove.twitter.27B.' + str(
+        fname = 'data/datasets/glove.twitter.27B.' + str(
             embed_dim) + 'd.txt'
         print(fname)
         word_vec = _load_wordvec(fname, vocab)
