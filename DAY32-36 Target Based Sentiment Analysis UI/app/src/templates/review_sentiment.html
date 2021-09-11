@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Sentiment Filter Demo</title>
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<nav class="navbar navbar-dark bg-primary">
+    <img src="{{ url_for('static', filename='flask_icon.png') }}" width="30" height="30" class="d-inline-block align-top" alt=""> Laptop Review</a>
+</nav>
+<body>
+  <div class="container" style="margin: 50px auto 50px auto;">
+    <div class="row">
+      <div class="col-auto">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{{ url_for('static', filename='flask_icon.png') }}" alt="Card image cap">
+          <div class="card-body">
+              <h6 class="card-title"> Title </h6>
+              <p class="card-text">{{ book_info[2] }}</p>
+              <h6 class="card-title"> Author</h6>
+              <p class="card-text">{{ book_info[3] }}</p>
+              <h6 class="card-title"> Year </h6>
+              <p class="card-text">{{ book_info[4] }}</p>
+              <h6 class="card-title"> ISBN </h6>
+              <p class="card-text">{{ book_info[1] }}</p>
+              <h6 class="card-title"> Goodread Rating </h6>
+              <p class="card-text">{{ rating }} / 5</p>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
