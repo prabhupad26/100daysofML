@@ -42,15 +42,17 @@ class Predictor:
         checkpoint = torch.load(checkpoint_file, map_location=torch.device('cpu'))
         return checkpoint, dim
 
-    def execute(self, text, aspect=None):
+    def execute(self, data_, aspect=None):
         model = self.build_model()
-        data = torch.tensor(self.tokenizer.text_to_sequence(text)).reshape(1, -1)
         if aspect:
             aspect = torch.tensor(self.tokenizer.text_to_sequence(aspect).reshape(1, -1))
-        complete_data = [data, aspect]
-        output = model(complete_data)
-        sentiment = self.polarity_dict[int(torch.argmax(output, -1))]
-        return sentiment
+        for idx in range(len(data_)):
+            text = data_[idx]['comment']
+            text = torch.tensor(self.tokenizer.text_to_sequence(text)).reshape(1, -1)
+            complete_data = [text, aspect]
+            output = model(complete_data)
+            data_[idx]['sentiment'] = self.polarity_dict[int(torch.argmax(output, -1))]
+        return data_
 
 
 if __name__ == '__main__':

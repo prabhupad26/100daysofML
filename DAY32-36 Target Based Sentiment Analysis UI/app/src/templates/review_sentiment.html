@@ -10,36 +10,99 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <!-- Latest compiled and minified JQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
 </head>
 <nav class="navbar navbar-dark bg-primary">
     <img src="{{ url_for('static', filename='flask_icon.png') }}" width="30" height="30" class="d-inline-block align-top" alt=""> Laptop Review</a>
 </nav>
 <body>
   <div class="container" style="margin: 50px auto 50px auto;">
-    <div class="row">
-      <div class="col-auto">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="{{ url_for('static', filename='flask_icon.png') }}" alt="Card image cap">
-          <div class="card-body">
-              <h6 class="card-title"> Title </h6>
-              <p class="card-text">{{ book_info[2] }}</p>
-              <h6 class="card-title"> Author</h6>
-              <p class="card-text">{{ book_info[3] }}</p>
-              <h6 class="card-title"> Year </h6>
-              <p class="card-text">{{ book_info[4] }}</p>
-              <h6 class="card-title"> ISBN </h6>
-              <p class="card-text">{{ book_info[1] }}</p>
-              <h6 class="card-title"> Goodread Rating </h6>
-              <p class="card-text">{{ rating }} / 5</p>
+      <div class="row">
+          <div class="col col-lg-2" id="image_pane">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" width=550px height=550px src="{{ url_for('static', filename='dell vostro 3400.jpg') }}" alt="Card image cap">
+            </div>
           </div>
-      </div>
-      </div>
-    </div>
+          <div class="w-100"></div>
+          <div class="col col-lg-2" id="specs_pane" style="top: 128px;">
+            <div class="card-body">
+              <h6 class="card-title"> Product Name </h6>
+              <p class="card-text">{{ product_data.name }}</p>
+              <h6 class="card-title"> Specifications</h6>
+              <p class="card-text">{{ product_data.specs }}
+            </div>
+          </div>
+        </div>
+      <div class="row">
+      <section style="background-color: #ada85f;">
+        <style>
+          .link-muted { color: #aaa; } .link-muted:hover { color: #1266f1; }
+        </style>
+        <div class="container my-5 py-5">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-12 col-lg-10">
+              <div class="card text-dark">
+                <div class="card-body p-4">
+                  <h4 class="mb-0">Recent comments</h4>
+                  <p class="fw-light mb-4 pb-2">Latest Comments section by users</p>
+                  <div>
+                    <div class="p-3 border bg-light">
+                      <input type="text" name="query" value="" id="aspectInput" placeholder="Enter Target text">
+                      <input type="submit" name="" value="SUBMIT" onclick="submit()">
+                    </div>
+                  </div>
+                  <hr class="my-0" />
+                  {% for review in reviews %}
+                  <div class="d-flex flex-start">
+                    <div>
+                      <h6 class="fw-bold mb-1">{{ review.user_name }}</h6>
+                      <div class="d-flex align-items-center mb-3">
+                        <p class="mb-0">
+                          <span class="badge bg-primary">{{ review.sentiment }}</span>
+                        </p>
+                      </div>
+                      <div class="card-body p-4">
+                        <p class="mb-0">
+                          {{ review.comment }}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-0" />
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
   </div>
+</div>
 </body>
+<style>
+  .col-lg-2 {
+    width: 45.666667%;
+}
+</style>
+<script type="text/javascript">
+  function submit(){
+        let aspectInput = document.querySelector('#aspectInput');
+        var fd = new FormData();
+        fd.append( 'aspect', aspectInput.value );
+        $.ajax({
+            type: "POST",
+            url: '{{ url_for('predict_sentiment') }}',
+            processData: false,
+            contentType: false,
+            data: fd,
+            success:function(data){
+              console.log("Request was successful!!!!")
+            }
+          });
+      };
+</script>
 </html>

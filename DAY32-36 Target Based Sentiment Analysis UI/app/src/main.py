@@ -1,11 +1,14 @@
-from flask import Flask, flash, redirect, render_template, request, session, abort, jsonify
+from flask import Flask, render_template, request
 from inference import Predictor
+from utils.fetch_data import fetch_reviews_data
 
 app = Flask(__name__)
 predictor = Predictor.build_prerequisites()
-
+init_data, product_dict = fetch_reviews_data()
 
 app.debug = True
+
+
 @app.route('/')
 def hello_world():
     return 'Hello World'
@@ -13,16 +16,15 @@ def hello_world():
 
 @app.route('/review_sentiment')
 def review_sentiment():
-    book_info = [1,2,3,4,45,5]
-    return render_template('review_sentiment.html', book_info=book_info)
+    return render_template('review_sentiment.html', product_data=product_dict, reviews=init_data)
 
 
 @app.route('/predict_sentiment', methods=['POST'])
 def predict_sentiment():
-    text = request.form['text']
     aspect = request.form['aspect']
-    sentiment = predictor.execute(text, aspect)
-    return jsonify({"sentiment": sentiment})
+    data_ = init_data.copy()
+    modified_data = predictor.execute(data_, aspect)
+    return render_template('review_sentiment.html', product_data=product_dict, reviews=modified_data)
 
 
 if __name__ == '__main__':
