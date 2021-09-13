@@ -12,6 +12,9 @@ class Predictor:
         self.polarity_dict = {0: 'positive', 1: 'negative', 2: 'neutral'}
         self.embed_matrix = embed_matrix
         self.tokenizer = tokenizer
+        self.badge_color_id = {'positive': 'badge bg-success',
+                          'negative': 'badge bg-danger',
+                          'neutral': 'badge bg-warning'}
 
     @classmethod
     def build_prerequisites(cls, model_name='AE', dataset_name='laptop_reviews'):
@@ -52,6 +55,7 @@ class Predictor:
             complete_data = [text, aspect]
             output = model(complete_data)
             data_[idx]['sentiment'] = self.polarity_dict[int(torch.argmax(output, -1))]
+            data_[idx]['badge_color'] = self.badge_color_id[data_[idx]['sentiment']]
         return data_
 
 
