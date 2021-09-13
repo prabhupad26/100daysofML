@@ -262,7 +262,7 @@ I'll be  training a LSTM network to generate sine waves :
 
 
 ## __DAY14 - 18__ : __Effective LSTMs for Target-Dependent Sentiment Classification (Research Paper Implementation)__
-
+<a name="AspectbasedLSTM"></a>
 * Overview:
    In [this](https://arxiv.org/pdf/1512.01100.pdf) paper it has been shown that by providing target information to an LSTM model can significantly boost the performance of the model in classifying the sentiment for the sentence. Sentiment analysis is a classic problem in NLP in which the polarity of the input (sentence) is to be predicted (polarity like : Good review ,Neutral review, Bad review, Worse review etc.). In this paper there are two LSTMs model has been proposed in which both the models are trained with the context words as well as target words.
 * Problem statement example : 
@@ -270,7 +270,7 @@ I'll be  training a LSTM network to generate sine waves :
   
 * Dataset:
    Pre trained Word vectors: 
-      - Pre trained word vectors representations were obtained from [GloVe Twitter Dataset] (https://nlp.stanford.edu/projects/glove/) consiting of around 2Billion word tokens with a dimensions of 50 , 100 , 200.
+      - Pre trained word vectors representations were obtained from [GloVe Twitter Dataset] (https://nlp.stanford.edu/projects/glove/) which is having around 2Billion word tokens with a dimensions of 50 , 100 , 200.
    - Data : The data is obtained from the [SemEval2014 task4](http://alt.qcri.org/semeval2014/task4/) for Restaurant and Laptop review comments, its a labeled dataset with the targets consists of 3 classes : `Positive`, `Negative` and `Neutral`
    
  * The main focus of this exercise is to understand how an LSTM network behaves when the target information is fed into its input during a sentiment classification task. So basically the idea is to train a LSTM network with target information along with the input and the output would be the polarity of the input based on that provided target information, also there can be cases wherein the same input sentence can have different polarity depending upon the target information. For example:
@@ -368,3 +368,8 @@ We will be using the base check point of a pretrained `wav2vec 2.0` ASR model wh
 
 
 ## __DAY32-36__ : __Target Based Sentiment Analysis UI__
+* Problem statement : Build a aspect based sentiment analysis model which will be able to predict the sentiment of a review comment from pre defined categories : `positive`, `negative` and `neutral` *
+* Solution : The approach to solve this problem is mentioned [here](#AspectbasedLSTM)
+
+* Snapshot of the UI :
+   
