@@ -372,3 +372,19 @@ We will be using the base check point of a pretrained `wav2vec 2.0` ASR model wh
 * Solution : The approach to solve this problem is mentioned [here](#AspectbasedLSTM)
 
    ![Snapshot of the UI](https://github.com/prabhupad26/100daysofML/blob/main/DAY32-36%20Target%20Based%20Sentiment%20Analysis%20UI/ui_demo_gif.gif)
+   
+   
+## __DAY37-43__ : __Stack Overflow Tags generation__
+ * Tasklist for this week's excercise:
+
+   - [x] Load data to DB
+   - [x] Read data from DB in iteration
+   - [x] Check how much duplicate rows are present and remove the duplicates
+   - [x] Get tags count and plot to find out mode frequent tags
+   - [x] Get # of tags per question count 
+   - [ ] Preprocessing Body: Remove html tags, spl cahrs, , lowercase all, stemming and lemmitization
+   - [ ] Define vector
+   - [ ] Define labels
+   - [ ] Splitting the data
+   - [ ] Define ML models
+   - [ ] Train, Test
