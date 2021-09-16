@@ -388,3 +388,6 @@ We will be using the base check point of a pretrained `wav2vec 2.0` ASR model wh
    - [ ] Splitting the data
    - [ ] Define ML models
    - [ ] Train, Test
+
+ * References : 
+   - https://github.com/chauhanakash23/StackOverflow-Tag-prediction/blob/master/SO_Tag_Predictor.ipynb
