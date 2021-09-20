@@ -1,6 +1,8 @@
 ## __DAY32-36__ : __Target Based Sentiment Analysis UI__
-* Problem statement : Build a aspect based sentiment analysis model which will be able to predict the sentiment of a review comment from pre defined categories : `positive`, `negative` and `neutral` *
+* Problem statement : Build a aspect based sentiment analysis model which will be able to predict the sentiment of a review comment from pre defined categories : `positive`, `negative` and `neutral`
+
 **Solution**
+
 * Dataset:
    Pre trained Word vectors: 
       - Pre trained word vectors representations were obtained from [GloVe Twitter Dataset] (https://nlp.stanford.edu/projects/glove/) which is having around 2Billion word tokens with a dimensions of 50 , 100 , 200.
