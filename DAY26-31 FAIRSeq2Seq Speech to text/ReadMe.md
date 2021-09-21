@@ -19,3 +19,8 @@ We will be using the base check point of a pretrained `wav2vec 2.0` ASR model wh
 **References**
 1. [Fine tune Wave2vec2 for English ASR with 🤗 transformer](https://huggingface.co/blog/fine-tune-wav2vec2-english)
 2. [Sequence Modeling with CTC](https://distill.pub/2017/ctc/)
+
+
+**Results**
+
+![Sample output](speech2text_2.gif)
