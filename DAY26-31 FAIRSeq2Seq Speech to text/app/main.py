@@ -1,10 +1,9 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from werkzeug.utils import secure_filename
 import os
 from predict import Speech2Text
 
 app = Flask(__name__)
-
 app.debug = True
 
 
@@ -22,11 +21,10 @@ def s2t_demo():
 def upload():
     file = request.files['audio_data']
     file_name = secure_filename(file.filename)
-    file_name = os.path.join("static", "uploads", f"{file_name}.wav")
+    file_name = os.path.join("static", "uploads", f"{file_name}.webm")
     file.save(file_name)
-    # s2t = Speech2Text()
-    # return {"text": s2t.predict(file_name)}
-    return "SUCCESS"
+    s2t = Speech2Text()
+    return s2t.predict(file_name)
 
 
 if __name__ == '__main__':

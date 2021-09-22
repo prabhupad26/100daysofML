@@ -13,19 +13,18 @@ var audioContext = new AudioContext;
 var recordButton = document.getElementById("recordButton");
 var stopButton = document.getElementById("stopButton");
 var pauseButton = document.getElementById("pauseButton");
-var voice_text = document.getElementById("computeButton");
+var computeButton = document.getElementById("computeButton");
 var text_description = document.getElementById("text_description");
 //add events to those 3 buttons
 recordButton.addEventListener("click", startRecording);
 pauseButton.addEventListener("click", pauseRecording);
-voice_text.addEventListener("click", function(){
-text_description.innerHTML = "Hello how ar you";})
 
 function startRecording() { 
     console.log("recordButton clicked");
     recordButton.disabled = true;
     stopButton.disabled = false;
     pauseButton.disabled = false;
+    computeButton.disabled = true;
 
 
     const handleSuccess = function(stream) {
@@ -51,7 +50,7 @@ function startRecording() {
 
         mediaRecorder.start();
     };
-    navigator.mediaDevices.getUserMedia({ audio: true, video: false }).then(handleSuccess);
+    navigator.mediaDevices.getUserMedia({ audio: {sampleRate: 16000}, video: false }).then(handleSuccess);
 
 
 }
@@ -83,11 +82,15 @@ function createDownloadLink(blob) {
     upload.href = "#";
     upload.innerHTML = "Upload";
     upload.addEventListener("click", function(event) {
-        voice_text.disabled = false;
         var xhr = new XMLHttpRequest();
         xhr.onload = function(e) {
             if (this.readyState === 4) {
                 console.log("Server returned: ", e.target.responseText);
+                computeButton.disabled = false;
+                computeButton.addEventListener('click', function(){
+                text_description.innerHTML = e.target.responseText;
+                computeButton.disabled = true;
+            })
             }
         };
         var fd = new FormData();
