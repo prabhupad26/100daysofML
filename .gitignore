@@ -18,3 +18,5 @@ ImageNetV2-matched-frequency*
 *.pt
 *.wav
 *.WAV
+*.webm
+
