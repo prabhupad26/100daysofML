@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-05T05:32:40.079Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="l_F995r6PIghhlDvySSc" version="24.0.7" type="github" pages="16">
+<mxfile host="app.diagrams.net" modified="2024-05-05T05:45:35.789Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="hCF2uHGqu-2_-snaKfY6" version="24.0.7" type="github" pages="16">
   <diagram name="Page-1" id="ljEujbJLQUYPLpvqMLAu">
     <mxGraphModel dx="954" dy="652" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -1455,10 +1455,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="_xaEl_633K2L5SePRXfn-5" value="Scheduled ingest" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#6abae2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
-          <mxGeometry x="170" y="451" width="80" height="80" as="geometry" />
+          <mxGeometry x="170" y="427.75" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="_xaEl_633K2L5SePRXfn-8" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="20" y="436" width="70" height="90" as="geometry" />
+          <mxGeometry x="20" y="413" width="70" height="90" as="geometry" />
         </mxCell>
         <mxCell id="_xaEl_633K2L5SePRXfn-4" value="Raw CSV Files" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=15;" vertex="1" parent="_xaEl_633K2L5SePRXfn-8">
           <mxGeometry width="50" height="70" as="geometry" />
@@ -1473,19 +1473,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="_xaEl_633K2L5SePRXfn-17" value="data_loader_module" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="330" y="548" width="60" height="30" as="geometry" />
+          <mxGeometry x="330" y="501" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="_xaEl_633K2L5SePRXfn-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_xaEl_633K2L5SePRXfn-10" target="_xaEl_633K2L5SePRXfn-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_xaEl_633K2L5SePRXfn-10" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="320" y="433" width="80" height="115" as="geometry" />
-        </mxCell>
-        <mxCell id="_xaEl_633K2L5SePRXfn-13" value="Read and create delta tables with default schema" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="330" y="478" width="60" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="_xaEl_633K2L5SePRXfn-23" value="transformation_module" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="520" y="508" width="60" height="30" as="geometry" />
+          <mxGeometry x="515" y="506" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="_xaEl_633K2L5SePRXfn-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="_xaEl_633K2L5SePRXfn-19" target="_xaEl_633K2L5SePRXfn-1">
           <mxGeometry relative="1" as="geometry" />
@@ -1508,23 +1502,32 @@
         <mxCell id="_xaEl_633K2L5SePRXfn-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_xaEl_633K2L5SePRXfn-42" target="_xaEl_633K2L5SePRXfn-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_xaEl_633K2L5SePRXfn-42" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="_xaEl_633K2L5SePRXfn-42" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="665" y="435.5" width="130" height="70.5" as="geometry" />
         </mxCell>
         <mxCell id="_xaEl_633K2L5SePRXfn-43" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1. Optimal number of clusters analysis.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;2. k-mean clustering scripts&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="673" y="455.75" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="_xaEl_633K2L5SePRXfn-21" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="480" y="436" width="140" height="73" as="geometry" />
+        <mxCell id="_xaEl_633K2L5SePRXfn-50" value="Visualization of customer segments" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="645" y="150" width="170" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_xaEl_633K2L5SePRXfn-19" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="_xaEl_633K2L5SePRXfn-21">
+        <mxCell id="_xaEl_633K2L5SePRXfn-53" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="310" y="434" width="100" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="_xaEl_633K2L5SePRXfn-10" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="_xaEl_633K2L5SePRXfn-53">
+          <mxGeometry width="100" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="_xaEl_633K2L5SePRXfn-13" value="Read and create delta tables with default schema" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="_xaEl_633K2L5SePRXfn-53">
+          <mxGeometry x="2" y="18" width="98" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_xaEl_633K2L5SePRXfn-55" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="480" y="434.5" width="140" height="73" as="geometry" />
+        </mxCell>
+        <mxCell id="_xaEl_633K2L5SePRXfn-19" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="_xaEl_633K2L5SePRXfn-55">
           <mxGeometry width="140" height="73" as="geometry" />
         </mxCell>
-        <mxCell id="_xaEl_633K2L5SePRXfn-20" value="&lt;span style=&quot;background-color: initial;&quot;&gt;Perform:&lt;/span&gt;&lt;div style=&quot;&quot;&gt;1. Data cleanup&lt;/div&gt;&lt;div style=&quot;&quot;&gt;2. Data transformation&lt;/div&gt;&lt;div style=&quot;&quot;&gt;3. Features extraction&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="487" y="458" width="125" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="_xaEl_633K2L5SePRXfn-50" value="Visualization of customer segments" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="648" y="150" width="170" height="60" as="geometry" />
+        <mxCell id="_xaEl_633K2L5SePRXfn-20" value="&lt;span style=&quot;background-color: initial;&quot;&gt;Perform:&lt;/span&gt;&lt;div style=&quot;&quot;&gt;1. Data cleanup&lt;/div&gt;&lt;div style=&quot;&quot;&gt;2. Data transformation&lt;/div&gt;&lt;div style=&quot;&quot;&gt;3. Features extraction&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="_xaEl_633K2L5SePRXfn-55">
+          <mxGeometry x="7.5" y="21.5" width="125" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
