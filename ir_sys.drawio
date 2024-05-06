@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-05T05:45:35.789Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="hCF2uHGqu-2_-snaKfY6" version="24.0.7" type="github" pages="16">
+<mxfile host="app.diagrams.net" modified="2024-05-06T05:40:19.381Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="ssTXXABhUsGkTFr7ANhn" version="24.0.7" type="github" pages="17">
   <diagram name="Page-1" id="ljEujbJLQUYPLpvqMLAu">
     <mxGraphModel dx="954" dy="652" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -1454,7 +1454,7 @@
         <mxCell id="_xaEl_633K2L5SePRXfn-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_xaEl_633K2L5SePRXfn-5" target="_xaEl_633K2L5SePRXfn-10">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_xaEl_633K2L5SePRXfn-5" value="Scheduled ingest" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#6abae2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+        <mxCell id="_xaEl_633K2L5SePRXfn-5" value="Data ingestion" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#6abae2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
           <mxGeometry x="170" y="427.75" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="_xaEl_633K2L5SePRXfn-8" value="" style="group" vertex="1" connectable="0" parent="1">
@@ -1528,6 +1528,53 @@
         </mxCell>
         <mxCell id="_xaEl_633K2L5SePRXfn-20" value="&lt;span style=&quot;background-color: initial;&quot;&gt;Perform:&lt;/span&gt;&lt;div style=&quot;&quot;&gt;1. Data cleanup&lt;/div&gt;&lt;div style=&quot;&quot;&gt;2. Data transformation&lt;/div&gt;&lt;div style=&quot;&quot;&gt;3. Features extraction&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="_xaEl_633K2L5SePRXfn-55">
           <mxGeometry x="7.5" y="21.5" width="125" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z0UIwm4StX-Cworom8t3-4" value="Weekly upload of csv files" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="147.5" y="520" width="125" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="f_J6sP-JO6QW936alVbn" name="Page-17">
+    <mxGraphModel dx="954" dy="652" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vBg8uEv0BiGrKiPeN-Fu-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="vBg8uEv0BiGrKiPeN-Fu-1" target="vBg8uEv0BiGrKiPeN-Fu-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vBg8uEv0BiGrKiPeN-Fu-1" value="Scheduled Data ingestion" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="140" y="318" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vBg8uEv0BiGrKiPeN-Fu-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="vBg8uEv0BiGrKiPeN-Fu-2" target="vBg8uEv0BiGrKiPeN-Fu-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vBg8uEv0BiGrKiPeN-Fu-2" value="Data Transformation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="250" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vBg8uEv0BiGrKiPeN-Fu-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="vBg8uEv0BiGrKiPeN-Fu-3" target="vBg8uEv0BiGrKiPeN-Fu-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vBg8uEv0BiGrKiPeN-Fu-3" value="Model train" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="410" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vBg8uEv0BiGrKiPeN-Fu-4" value="Visualization" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="378" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vBg8uEv0BiGrKiPeN-Fu-9" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="10" y="290" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="vBg8uEv0BiGrKiPeN-Fu-5" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="vBg8uEv0BiGrKiPeN-Fu-9">
+          <mxGeometry width="72" height="83.33333333333334" as="geometry" />
+        </mxCell>
+        <mxCell id="vBg8uEv0BiGrKiPeN-Fu-6" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="vBg8uEv0BiGrKiPeN-Fu-9">
+          <mxGeometry x="9" y="8.333333333333314" width="72" height="83.33333333333334" as="geometry" />
+        </mxCell>
+        <mxCell id="vBg8uEv0BiGrKiPeN-Fu-7" value="Batch of raw data" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=21;" vertex="1" parent="vBg8uEv0BiGrKiPeN-Fu-9">
+          <mxGeometry x="18" y="16.666666666666686" width="72" height="83.33333333333334" as="geometry" />
+        </mxCell>
+        <mxCell id="vBg8uEv0BiGrKiPeN-Fu-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vBg8uEv0BiGrKiPeN-Fu-7" target="vBg8uEv0BiGrKiPeN-Fu-1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
